@@ -14,6 +14,7 @@ namespace Entidades
         {
             this.CambiarNombre("Jose Angel","Ramirez");
         }
+
         public void CambiarNombre()
         {
             
@@ -48,6 +49,9 @@ namespace Entidades
             
             return $"Hola {nombre}";
         }
+
+        ///Listas
+
         public string Saludar(List<string> nombres)
         {
             string mensaje = "";
@@ -63,6 +67,10 @@ namespace Entidades
             }
             return $"{string.Format("{0}", string.Join("", nombres.Select(p => $"Hola {p}\n")))}";
         }
+
+
+        ///LISTAR PERSONAS
+        
         public string Saludar(List<Persona> personas)
         {
             string mensaje = "";

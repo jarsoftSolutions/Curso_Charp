@@ -6,6 +6,8 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
+    using Mantenimientos;
+
     static class Program
     {
         /// <summary>
@@ -16,7 +18,7 @@ namespace Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new  FrmPersona());
         }
     }
 }

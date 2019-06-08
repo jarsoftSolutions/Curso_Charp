@@ -13,6 +13,8 @@ namespace Entidades
         public int Edad { get; set; }
         public string ColorPelo { get; set; }
         public string EstadoCivil { get; set; }
+         
+
 
         public string NombreCompleto
         {
