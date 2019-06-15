@@ -13,33 +13,12 @@ namespace Entidades
         public int Edad { get; set; }
         public string ColorPelo { get; set; }
         public string EstadoCivil { get; set; }
-         
+        public bool Activo { get; set; }
+        public DateTime FechaNacimiento { get; set; }
 
 
-        public string NombreCompleto
-        {
-            get
-            {
-                return Nombre + " " + Apellido; //$"{Nombre} {Apellido}";
-            }
-        }
 
 
-        public PropiedadesPersona()
-        {
 
-        }
-        public PropiedadesPersona(string nombre)
-        {
-            this.Nombre = nombre;
-        }
-
-        public PropiedadesPersona(string nombre, string apellido, int edad, string colorPelo, string estadoCivil) : this(nombre)
-        {
-            Apellido = apellido;
-            Edad = edad;
-            ColorPelo = colorPelo;
-            EstadoCivil = estadoCivil;
-        }
     }
 }

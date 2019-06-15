@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.TxtApellido = new System.Windows.Forms.TextBox();
@@ -40,13 +41,17 @@
             this.CoboColor = new System.Windows.Forms.ComboBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
+            this.chkActivo = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TxtFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(69, 35);
+            this.label1.Location = new System.Drawing.Point(77, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 24);
             this.label1.TabIndex = 0;
@@ -72,7 +77,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(69, 68);
+            this.label2.Location = new System.Drawing.Point(77, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 24);
             this.label2.TabIndex = 2;
@@ -90,7 +95,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(69, 101);
+            this.label3.Location = new System.Drawing.Point(101, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 24);
             this.label3.TabIndex = 4;
@@ -100,7 +105,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(46, 135);
+            this.label4.Location = new System.Drawing.Point(54, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 24);
             this.label4.TabIndex = 6;
@@ -110,7 +115,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(46, 169);
+            this.label5.Location = new System.Drawing.Point(63, 169);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 24);
             this.label5.TabIndex = 8;
@@ -145,7 +150,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(160, 236);
+            this.btnLimpiar.Location = new System.Drawing.Point(144, 271);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(112, 39);
             this.btnLimpiar.TabIndex = 11;
@@ -155,19 +160,54 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.Location = new System.Drawing.Point(279, 236);
+            this.BtnGuardar.Location = new System.Drawing.Point(263, 271);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(135, 39);
             this.BtnGuardar.TabIndex = 10;
             this.BtnGuardar.Text = "&Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            // 
+            // chkActivo
+            // 
+            this.chkActivo.AutoSize = true;
+            this.chkActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.chkActivo.Location = new System.Drawing.Point(159, 231);
+            this.chkActivo.Name = "chkActivo";
+            this.chkActivo.Size = new System.Drawing.Size(124, 28);
+            this.chkActivo.TabIndex = 12;
+            this.chkActivo.Text = "Esta Activo";
+            this.toolTip1.SetToolTip(this.chkActivo, "Seleccionar La Opcion para activar la persona");
+            this.chkActivo.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(48, 201);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 24);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Fecha. Nac.";
+            // 
+            // TxtFechaNac
+            // 
+            this.TxtFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.TxtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.TxtFechaNac.Location = new System.Drawing.Point(160, 201);
+            this.TxtFechaNac.Name = "TxtFechaNac";
+            this.TxtFechaNac.Size = new System.Drawing.Size(197, 27);
+            this.TxtFechaNac.TabIndex = 14;
             // 
             // FrmPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(676, 318);
+            this.ClientSize = new System.Drawing.Size(634, 347);
+            this.Controls.Add(this.TxtFechaNac);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.chkActivo);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.CoboColor);
@@ -183,6 +223,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmPersona";
             this.Text = "Mantemiento de Personas";
+            this.Load += new System.EventHandler(this.FrmPersona_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +243,9 @@
         private System.Windows.Forms.ComboBox CoboColor;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button BtnGuardar;
+        private System.Windows.Forms.CheckBox chkActivo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker TxtFechaNac;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
