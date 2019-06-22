@@ -14,11 +14,8 @@ namespace Entidades
         public string ColorPelo { get; set; }
         public string EstadoCivil { get; set; }
         public bool Activo { get; set; }
+        public string Cliente { get { return $"{Nombre} {Apellido}"; } }
         public DateTime FechaNacimiento { get; set; }
-
-
-
-
 
     }
 }

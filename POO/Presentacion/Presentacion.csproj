@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\FrmAsync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmAsync.Designer.cs">
+      <DependentUpon>FrmAsync.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\FrmPersona.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmAsync.resx">
+      <DependentUpon>FrmAsync.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\FrmPersona.resx">
       <DependentUpon>FrmPersona.cs</DependentUpon>
