@@ -49,11 +49,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.DtListado = new System.Windows.Forms.DataGridView();
-            this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TxtBuscar = new System.Windows.Forms.TextBox();
+            this.TxtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ControlErrores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtListado)).BeginInit();
             this.SuspendLayout();
@@ -253,10 +254,36 @@
             this.Column3});
             this.DtListado.Location = new System.Drawing.Point(12, 335);
             this.DtListado.Name = "DtListado";
-            this.DtListado.ReadOnly = true;
             this.DtListado.RowTemplate.Height = 24;
             this.DtListado.Size = new System.Drawing.Size(610, 202);
             this.DtListado.TabIndex = 17;
+            this.DtListado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtListado_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Cliente";
+            this.Column1.HeaderText = "Cliente";
+            this.Column1.Name = "Column1";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Activo";
+            this.Column4.FalseValue = "";
+            this.Column4.HeaderText = "Activo";
+            this.Column4.Name = "Column4";
+            this.Column4.TrueValue = "";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "FechaNacimiento";
+            this.Column2.HeaderText = "F Nac.";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "EstadoCivil";
+            this.Column3.HeaderText = "Estado C.";
+            this.Column3.Name = "Column3";
             // 
             // TxtBuscar
             // 
@@ -265,36 +292,19 @@
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(271, 27);
             this.TxtBuscar.TabIndex = 18;
+            this.TxtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
-            // Column1
+            // TxtId
             // 
-            this.Column1.DataPropertyName = "Cliente";
-            this.Column1.HeaderText = "Cliente";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Activo";
-            this.Column4.FalseValue = "";
-            this.Column4.HeaderText = "Activo";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.TrueValue = "";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "FechaNacimiento";
-            this.Column2.HeaderText = "F Nac.";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "EstadoCivil";
-            this.Column3.HeaderText = "Estado C.";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtId.Location = new System.Drawing.Point(442, 123);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.ReadOnly = true;
+            this.TxtId.Size = new System.Drawing.Size(96, 27);
+            this.TxtId.TabIndex = 19;
+            this.TxtId.Text = "0";
+            this.TxtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtId.Visible = false;
             // 
             // FrmPersona
             // 
@@ -302,6 +312,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(634, 549);
+            this.Controls.Add(this.TxtId);
             this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.DtListado);
             this.Controls.Add(this.label8);
@@ -359,5 +370,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.TextBox TxtId;
     }
 }

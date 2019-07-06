@@ -25,7 +25,45 @@ namespace Negocio
         public PersonaMant()
         {
             this.ListadoPersonas = new List<Persona>();
+            AsignarDatos();
         }
 
+        private void AsignarDatos()
+        {
+
+            this.ListadoPersonas.Add(new Persona()
+            {
+                Activo = true,
+                Apellido = "Martinez",
+                ColorPelo = "Negro",
+                Edad = 29,
+                EstadoCivil = "Soltero",
+                FechaNacimiento = DateTime.Now.AddYears(-20),
+                Nombre = "JOSE ANGEL"
+
+            });
+            this.ListadoPersonas.Add(new Persona()
+            {
+                Activo = true,
+                Apellido = "SANCHEZ",
+                ColorPelo = "Negro",
+                Edad = 29,
+                EstadoCivil = "Soltero",
+                FechaNacimiento = DateTime.Now.AddYears(-20),
+                Nombre = "LEON"
+
+            });
+            this.ListadoPersonas.Add(new Persona()
+            {
+                Activo = true,
+                Apellido = "ROSARIO",
+                ColorPelo = "Negro",
+                Edad = 29,
+                EstadoCivil = "Soltero",
+                FechaNacimiento = DateTime.Now.AddYears(-20),
+                Nombre = "RAMON"
+
+            });
+        }
     }
 }
