@@ -58,6 +58,12 @@
     <Compile Include="Mantenimientos\FrmAsync.Designer.cs">
       <DependentUpon>FrmAsync.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\FrmCiudades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmCiudades.Designer.cs">
+      <DependentUpon>FrmCiudades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\FrmPaises.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\FrmAsync.resx">
       <DependentUpon>FrmAsync.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmCiudades.resx">
+      <DependentUpon>FrmCiudades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\FrmPaises.resx">
       <DependentUpon>FrmPaises.cs</DependentUpon>

@@ -16,15 +16,18 @@ namespace Negocio
         /// <summary>
         /// String de conexion a la Base de datos
         /// </summary>
-        public static string SqlStrConection { get; set; }
+        public static string SqlStrConection { get { return "Data source=localhost;Initial Catalog=CursoCsharp;Integrated Security=true"; }  }
 
         public static SqlConnection GetConnection()
         {
-            if (sqlConnection ==null)
+            if (sqlConnection ==null || sqlConnection.State== ConnectionState.Closed)
             {
                 sqlConnection = new SqlConnection(SqlStrConection);            
             }
             return sqlConnection;
         }
+
+
     }
+
 }

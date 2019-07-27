@@ -15,7 +15,6 @@ namespace Negocio
 
         public MainViewModel()
         {
-            Conexion.SqlStrConection = "Data source=localhost;Initial Catalog=CursoCsharp;Integrated Security=true";
         }
         public bool AbrirConexion()
         {
