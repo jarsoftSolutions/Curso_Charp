@@ -15,7 +15,7 @@ namespace Presentacion.Mantenimientos
     public partial class FrmCiudades : Form
     {
         public Paises Pais { get; set; }
-        public List<Paisdb> ListadoPais { get; set; }
+        public List<Pais> ListadoPais { get; set; }
 
         public Ciudades Ciudad { get; set; }
 
@@ -35,22 +35,37 @@ namespace Presentacion.Mantenimientos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            var Opais = CboPais.SelectedItem as Paisdb;
+            var Opais = CboPais.SelectedItem as Pais;
             if (Opais == null)
             {
                 MessageBox.Show("Debe Seleccionar Un Pais", "Complete", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             //Declaramos un Objeto para Insertar en la BD
-            Ciudaddb Ociudad = new Ciudaddb()
+            Ciudad Ociudad = new Ciudad()
             {
                 Id = 0,
-                Ciudad = TxtCiudad.Text,
+                ciudad = TxtCiudad.Text,
                 IdPais = Opais.Id
             };
             //Preguntamos si se interto
-            if (Ciudad.Insertar(Ociudad))
-                MessageBox.Show("La Ciudad Se ha Insertado Correctamente", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //if (Ciudad.Insertar(Ociudad))
+            try
+            {
+                using (var api = new ServicioBase())
+                {
+                    api.Ciudad.Add(Ociudad);
+                    
+                    api.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+
+               
+            }
+
+            MessageBox.Show("La Ciudad Se ha Insertado Correctamente", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 

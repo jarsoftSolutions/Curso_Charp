@@ -69,7 +69,7 @@ namespace Presentacion.Mantenimientos
 
             this.DtListado.AutoGenerateColumns = false;
             DtListado.DataSource = Mant.ListadoPersonas;
-            personasSearch = new List<Persona>();
+            personasSearch = new List<Persona2>();
             ListaPersona = new DataTable();
             ListaPersona.Columns.Add("Id", typeof(int));
             ListaPersona.Columns.Add("Nombre", typeof(string));
@@ -178,7 +178,7 @@ namespace Presentacion.Mantenimientos
             txtEdad.Text =string.Format("{0:N0}", valor);
 
         }
-        List<Persona> personasSearch;
+        List<Persona2> personasSearch;
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
         {
             // Buscar(TxtBuscar.Text);

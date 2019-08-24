@@ -15,7 +15,7 @@ namespace Negocio
         {
 
         }
-        public bool Insertar(Ciudaddb ciudaddb)
+        public bool Insertar(Ciudad ciudaddb)
         {
             bool result=false;
             using (SqlConnection conn=Conexion.GetConnection())
@@ -35,7 +35,7 @@ namespace Negocio
                     //@Id INT,@Idpais INT,@ciudad varchar(100)
                     comando.Parameters.AddWithValue("@Id", ciudaddb.Id);
                     comando.Parameters.AddWithValue("@Idpais", ciudaddb.IdPais);
-                    comando.Parameters.AddWithValue("@ciudad", ciudaddb.Ciudad);
+                    comando.Parameters.AddWithValue("@ciudad", ciudaddb.ciudad);
                     //Ejecutamos la Instrucion a la Base de datos 
                     result = comando.ExecuteNonQuery() > 0;
 

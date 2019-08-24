@@ -43,10 +43,10 @@ namespace Presentacion.Mantenimientos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Paisdb opaises = new Paisdb()
+            Pais opaises = new Pais()
             {
                 Id = 0,
-                Pais = txtPais.Text
+                pais = txtPais.Text
             };
             var PaisGuardado = OPais.GuardarPais(opaises);
             if (PaisGuardado !=null)

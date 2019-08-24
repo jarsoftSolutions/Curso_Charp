@@ -17,7 +17,7 @@ namespace Negocio
            
         }
 
-        public bool Guardar(Paisdb opais )
+        public bool Guardar(Pais opais )
         {
             bool resultado = false; 
             using (var conn=Conexion.GetConnection())
@@ -29,7 +29,7 @@ namespace Negocio
                     comando.CommandType = System.Data.CommandType.StoredProcedure;
                     comando.CommandText = "InsertarPaises";
                     comando.Parameters.AddWithValue("@IdPais", opais.Id);
-                    comando.Parameters.AddWithValue("@Pais", opais.Pais);
+                    comando.Parameters.AddWithValue("@Pais", opais.pais);
                     int result = comando.ExecuteNonQuery();
                     resultado = result > 0;
                 }
@@ -37,9 +37,9 @@ namespace Negocio
 
             return resultado;
         }
-        public Paisdb GuardarPais(Paisdb opais)
+        public Pais GuardarPais(Pais opais)
         {
-            Paisdb resultado = null;
+            Pais resultado = null;
             using (var conn = Conexion.GetConnection())
             {
                 conn.Open();
@@ -53,7 +53,7 @@ namespace Negocio
                         ParameterName = "@Pais",
                         SqlDbType = System.Data.SqlDbType.VarChar,
                         Size = 150,
-                        SqlValue = opais.Pais
+                        SqlValue = opais.pais
                     };
                     comando.Parameters.Add(Param);
                     comando.ExecuteNonQuery();
@@ -61,17 +61,17 @@ namespace Negocio
                     {
                         Comm.Connection = conn;
                         Comm.CommandType = CommandType.Text;
-                        Comm.CommandText = "select @@IDENTITY";
+                        Comm.CommandText = "select @@IDENTITY as Codigo";
                         SqlDataAdapter sqlData = new SqlDataAdapter(Comm);
                         DataTable Odatos = new DataTable();
                         sqlData.Fill(Odatos);
 
                         if (Odatos !=null && Odatos.Rows.Count>0)
                         {
-                            resultado = new Paisdb()
+                            resultado = new Pais()
                             {
-                                 Id=int.Parse(Odatos.Rows[0][0].ToString()),
-                                  Pais=opais.Pais
+                                 Id=int.Parse(Odatos.Rows[0]["Codigo"].ToString()),
+                                  pais=opais.pais
                             };
                         }
                     }
@@ -88,9 +88,9 @@ namespace Negocio
        // 3 Nombre de la Funcion
        // Opcional si recibira parametros
 
-        public List<Paisdb> ListadoPaises()
+        public List<Pais> ListadoPaises()
         {
-            List<Paisdb> resultado = new List<Paisdb>();
+            List<Pais> resultado = new List<Pais>();
             using (var conn = Conexion.GetConnection())
             {
                 conn.Open();
@@ -107,10 +107,10 @@ namespace Negocio
                         {
                         foreach (DataRow item in Odatos.Rows)
                         {
-                            resultado.Add(new Paisdb()
+                            resultado.Add(new Pais()
                             {
                                 Id = int.Parse(item["Id"].ToString()),
-                                Pais = item["Pais"].ToString()
+                                pais = item["Pais"].ToString()
                             });
                         }
                             

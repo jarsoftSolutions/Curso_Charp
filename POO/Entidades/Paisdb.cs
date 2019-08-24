@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-  public  class Paisdb
+  public  class Pais
     {
         public int Id { get; set; }
-        public string Pais { get; set; }
+        public string pais { get; set; }
     }
 }
