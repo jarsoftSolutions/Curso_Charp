@@ -27,7 +27,19 @@ namespace ColmadoFact.Mantenimientos
             TxtId.Text = string.Empty;
             ChkActivo.Checked = false;
         }
-
+        private void MostrarItem(Categoria categoria)
+        {
+            if (categoria ==null)
+            {
+                return;
+            }
+            TxtId.Enabled = false;
+            TxtDescripcion.Text = categoria.Descripcion;
+            TxtId.Text = categoria.Id.ToString();
+            ChkActivo.Checked = categoria.Activa;
+            BtnGuardar.Enabled = true;
+            BtnEliminar.Enabled = true;
+        }
 
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -73,6 +85,8 @@ namespace ColmadoFact.Mantenimientos
                     if (db.SaveChanges() != 0)
                     {
                         MessageBox.Show("Registro Guardado Exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        BtnEliminar.Enabled = false;
+                        BtnGuardar.Enabled = false;
                         Limpiar();
                         MostrarDatos();
                     }
@@ -84,7 +98,15 @@ namespace ColmadoFact.Mantenimientos
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
+        private void Eliminar(Categoria categoria)
+        {
+            using (var db = new Db())
+            {
+                db.Entry<Categoria>(categoria).State =  EntityState.Deleted;
+                db.SaveChanges();
+            }
+            MostrarDatos();
+        }
         private void MostrarDatos()
         {
             using (var db = new Db())
@@ -98,6 +120,48 @@ namespace ColmadoFact.Mantenimientos
         private void FrmCategorias_Load(object sender, EventArgs e)
         {
             MostrarDatos();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex<=-1 )
+            {
+                return;
+            }
+            var cate = dataGridView1.CurrentRow.DataBoundItem as Categoria;
+            MostrarItem(cate);
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow ==null)
+            {
+                return;
+            }
+            var respuesta = MessageBox.Show("Seguro que desea Eliminar esta Categoria", 
+                                            "Confirme",
+                                            MessageBoxButtons.YesNo,
+                                            MessageBoxIcon.Question,
+                                            MessageBoxDefaultButton.Button1);
+            if (respuesta== DialogResult.No)
+            {
+                return;
+            }
+            var cate = dataGridView1.CurrentRow.DataBoundItem as Categoria;
+            Eliminar(cate);
+            BtnEliminar.Enabled = false;
+            BtnGuardar.Enabled = false;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            using (var db = new Db())
+            {
+                dataGridView1.DataSource = db.Categorias.Where(p =>
+                              p.Descripcion.ToLower().Contains(textBox1.Text.ToLower())
+                              || p.Id.ToString().Contains(textBox1.Text)).ToList();
+            }
         }
     }
 }
