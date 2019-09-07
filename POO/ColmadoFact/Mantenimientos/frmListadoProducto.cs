@@ -39,9 +39,22 @@ namespace ColmadoFact.Mantenimientos
 
             using (var db = new Db())
             {
+
+                //var result = (from p in db.Productos.ToList()
+                //              join c in db.Categorias.ToList()
+                //              on p.CategoriaId equals c.Id
+                //              select new
+                //              {
+                //                  p.Descripcion,
+                //                  p.Id,
+                //                  p.Precio,
+                //                  p.PrecioLimite,
+                //                  p.Referencia,
+                //                  Categoria = c.Descripcion
+                //              }).ToList();
+
                  
-                var Product = db.Productos
-                                           .Select(
+                var Product = db.Productos.Select(
                                             p => new
                                             {
                                                 p.Descripcion,
