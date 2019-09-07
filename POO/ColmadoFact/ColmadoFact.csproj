@@ -65,6 +65,24 @@
     <Compile Include="Mantenimientos\FrmCategorias.Designer.cs">
       <DependentUpon>FrmCategorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\frmListadoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmListadoProducto.Designer.cs">
+      <DependentUpon>frmListadoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMarca.Designer.cs">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmProducto.Designer.cs">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201908242107464_CrearCategoria.cs" />
     <Compile Include="Migrations\201908242107464_CrearCategoria.Designer.cs">
       <DependentUpon>201908242107464_CrearCategoria.cs</DependentUpon>
@@ -73,19 +91,41 @@
     <Compile Include="Migrations\201908242114257_ReCrearCategoria.Designer.cs">
       <DependentUpon>201908242114257_ReCrearCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909072056484_Pructos-Marcas.cs" />
+    <Compile Include="Migrations\201909072056484_Pructos-Marcas.Designer.cs">
+      <DependentUpon>201909072056484_Pructos-Marcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909072104512_Pructos-Modify.cs" />
+    <Compile Include="Migrations\201909072104512_Pructos-Modify.Designer.cs">
+      <DependentUpon>201909072104512_Pructos-Modify.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Categoria.cs" />
+    <Compile Include="Models\Marca.cs" />
+    <Compile Include="Models\Producto.cs" />
     <Compile Include="Negocio\Db.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Mantenimientos\FrmCategorias.resx">
       <DependentUpon>FrmCategorias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmListadoProducto.resx">
+      <DependentUpon>frmListadoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmMarca.resx">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908242107464_CrearCategoria.resx">
       <DependentUpon>201908242107464_CrearCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908242114257_ReCrearCategoria.resx">
       <DependentUpon>201908242114257_ReCrearCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909072056484_Pructos-Marcas.resx">
+      <DependentUpon>201909072056484_Pructos-Marcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909072104512_Pructos-Modify.resx">
+      <DependentUpon>201909072104512_Pructos-Modify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
