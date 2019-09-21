@@ -20,5 +20,15 @@ namespace ColmadoFact.Mantenimientos
             InitializeComponent();
            
         }
+
+        private void FrmProducto_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnNuevo_Click(object sender, EventArgs e)
+        {
+            this.LimpiarMyControls();
+        }
     }
 }

@@ -34,8 +34,7 @@ namespace ColmadoFact.Mantenimientos
         }
         public void MostrarProductos()
         {
-            var variable = 5;
-            var otra = variable;
+           
 
             using (var db = new Db())
             {

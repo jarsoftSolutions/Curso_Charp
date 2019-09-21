@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FactExtension.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +100,10 @@
     <Compile Include="Migrations\201909072104512_Pructos-Modify.Designer.cs">
       <DependentUpon>201909072104512_Pructos-Modify.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909211826294_TablaProduct.cs" />
+    <Compile Include="Migrations\201909211826294_TablaProduct.Designer.cs">
+      <DependentUpon>201909211826294_TablaProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Marca.cs" />
@@ -115,6 +120,9 @@
     <EmbeddedResource Include="Mantenimientos\FrmMarca.resx">
       <DependentUpon>FrmMarca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmProducto.resx">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908242107464_CrearCategoria.resx">
       <DependentUpon>201908242107464_CrearCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909072104512_Pructos-Modify.resx">
       <DependentUpon>201909072104512_Pructos-Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909211826294_TablaProduct.resx">
+      <DependentUpon>201909211826294_TablaProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
