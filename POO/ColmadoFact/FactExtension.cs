@@ -38,7 +38,6 @@ namespace ColmadoFact
                     ((CheckBox)item).Checked = false;
                 else if (item is NumericUpDown)
                     ((NumericUpDown)item).Value = 0;
-
             }
         }
 

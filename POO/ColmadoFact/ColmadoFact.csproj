@@ -164,5 +164,11 @@
   <ItemGroup>
     <Folder Include="Transacciones\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ColmadoFact.MyControls\ColmadoFact.MyControls.csproj">
+      <Project>{61e3dcd2-97e9-4e14-9eee-88d9c470305b}</Project>
+      <Name>ColmadoFact.MyControls</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
