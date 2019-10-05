@@ -16,6 +16,17 @@ namespace ColmadoFact.MyControls.Editors
             InitializeComponent();
         }
 
+        public new string Text
+        {
+            get => base.Value;
+            set => base.Text = value;
+        }
+        //public override string Text
+        //{
+        //    get => base.Value;
+        //    set => base.Text = value;
+        //}
+
         public ColTextBox(IContainer container)
         {
             container.Add(this);
