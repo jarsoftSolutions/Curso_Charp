@@ -33,11 +33,14 @@
             this.colTextBox2 = new ColmadoFact.MyControls.Editors.ColTextBox(this.components);
             this.colTextBox3 = new ColmadoFact.MyControls.Editors.ColTextBox(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.btnSalir1 = new ColmadoFact.MyControls.UI.BtnSalir(this.components);
+            this.btnGrabar1 = new ColmadoFact.MyControls.UI.BtnGrabar(this.components);
             this.SuspendLayout();
             // 
             // colTextBox1
             // 
             this.colTextBox1.ControlSource = null;
+            this.colTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(157)))), ((int)(((byte)(155)))));
             this.colTextBox1.Formulario = this;
             this.colTextBox1.Location = new System.Drawing.Point(148, 130);
             this.colTextBox1.Name = "colTextBox1";
@@ -46,10 +49,13 @@
             this.colTextBox1.Requiered = false;
             this.colTextBox1.Size = new System.Drawing.Size(235, 22);
             this.colTextBox1.TabIndex = 2;
+            this.colTextBox1.Text = "Hola Mundo";
+            this.colTextBox1.UsertDigited = false;
             // 
             // colTextBox2
             // 
             this.colTextBox2.ControlSource = null;
+            this.colTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(157)))), ((int)(((byte)(155)))));
             this.colTextBox2.Formulario = this;
             this.colTextBox2.Location = new System.Drawing.Point(148, 159);
             this.colTextBox2.Name = "colTextBox2";
@@ -58,10 +64,12 @@
             this.colTextBox2.Requiered = false;
             this.colTextBox2.Size = new System.Drawing.Size(235, 22);
             this.colTextBox2.TabIndex = 1;
+            this.colTextBox2.UsertDigited = false;
             // 
             // colTextBox3
             // 
             this.colTextBox3.ControlSource = null;
+            this.colTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(157)))), ((int)(((byte)(155)))));
             this.colTextBox3.Formulario = this;
             this.colTextBox3.Location = new System.Drawing.Point(148, 198);
             this.colTextBox3.Name = "colTextBox3";
@@ -70,6 +78,7 @@
             this.colTextBox3.Requiered = false;
             this.colTextBox3.Size = new System.Drawing.Size(235, 22);
             this.colTextBox3.TabIndex = 0;
+            this.colTextBox3.UsertDigited = false;
             // 
             // button1
             // 
@@ -81,11 +90,35 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnSalir1
+            // 
+            this.btnSalir1.Formulario = null;
+            this.btnSalir1.Location = new System.Drawing.Point(495, 200);
+            this.btnSalir1.Name = "btnSalir1";
+            this.btnSalir1.PuedeSeguir = false;
+            this.btnSalir1.Size = new System.Drawing.Size(119, 32);
+            this.btnSalir1.TabIndex = 4;
+            this.btnSalir1.Text = "Salir";
+            this.btnSalir1.UseVisualStyleBackColor = true;
+            // 
+            // btnGrabar1
+            // 
+            this.btnGrabar1.Formulario = null;
+            this.btnGrabar1.Location = new System.Drawing.Point(342, 294);
+            this.btnGrabar1.Name = "btnGrabar1";
+            this.btnGrabar1.PuedeSeguir = false;
+            this.btnGrabar1.Size = new System.Drawing.Size(135, 39);
+            this.btnGrabar1.TabIndex = 5;
+            this.btnGrabar1.Text = "btnGrabar1";
+            this.btnGrabar1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGrabar1);
+            this.Controls.Add(this.btnSalir1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.colTextBox3);
             this.Controls.Add(this.colTextBox2);
@@ -103,6 +136,8 @@
         private MyControls.Editors.ColTextBox colTextBox3;
         private MyControls.Editors.ColTextBox colTextBox2;
         private System.Windows.Forms.Button button1;
+        private MyControls.UI.BtnSalir btnSalir1;
+        private MyControls.UI.BtnGrabar btnGrabar1;
     }
 }
 

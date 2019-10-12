@@ -16,5 +16,12 @@ namespace ColmadoFact.MyControls.UI
         {
             InitializeComponent();
         }
+
+        public bool EsNuevo { get; internal set; }
+
+        internal void Limpiar()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

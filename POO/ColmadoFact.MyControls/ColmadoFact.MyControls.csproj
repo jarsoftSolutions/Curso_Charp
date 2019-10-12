@@ -56,12 +56,47 @@
       <DependentUpon>ColTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\BtnBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\BtnBase.Designer.cs">
+      <DependentUpon>BtnBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BtnGrabar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\BtnGrabar.Designer.cs">
+      <DependentUpon>BtnGrabar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BtnLimpiar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\BtnLimpiar.Designer.cs">
+      <DependentUpon>BtnLimpiar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BtnNuevo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\BtnNuevo.Designer.cs">
+      <DependentUpon>BtnNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BtnSalir.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\BtnSalir.Designer.cs">
+      <DependentUpon>BtnSalir.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\FormBase.Designer.cs">
       <DependentUpon>FormBase.cs</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\BtnGrabar.resx">
+      <DependentUpon>BtnGrabar.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
