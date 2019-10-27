@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace ColmadoFact.MyControls.UI
 {
+    [ToolboxItem(true)]
     public partial class BtnLimpiar : BtnBase
     {
         public BtnLimpiar()

@@ -1,0 +1,8 @@
+﻿
+Problema-01
+1. Acceder al Sistema de Archivo de Windows en la Carpeta Documents del Usuario
+2. Extraer Todos los Archivos que existan en dicha Carpeta.
+3. LLenar una Lista Con una Clase tipo Archivo con los Campos siguiente: FileName,Extension,Path.
+   En el Constructor se deberan pasar los Argurmentos o paramentros para la Construccion de la clase.
+   Cada propiedad debera tener una descripcion de su contenido
+4. Agregar los Archivos a un ListView con las Columnas de FileName, Extension

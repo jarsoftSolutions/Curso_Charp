@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ColmadoFact.MyControls.UI
-{
+{   [ToolboxItem(true)]
     public partial class BtnNuevo : BtnBase
     {
         public BtnNuevo()

@@ -55,7 +55,14 @@
     <Compile Include="Editors\ColTextBox.Designer.cs">
       <DependentUpon>ColTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="FactExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\BaseCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\BaseCheckBox.Designer.cs">
+      <DependentUpon>BaseCheckBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\BtnBase.cs">
       <SubType>Component</SubType>
     </Compile>
