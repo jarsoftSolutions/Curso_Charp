@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UsoDeControles.Clase01;
 
 namespace UsoDeControles
 {
@@ -16,7 +17,7 @@ namespace UsoDeControles
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmclase01());
+            Application.Run(new FrmClase01Data());
         }
     }
 }

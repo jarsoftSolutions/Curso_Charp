@@ -6,3 +6,12 @@ Problema-01
    En el Constructor se deberan pasar los Argurmentos o paramentros para la Construccion de la clase.
    Cada propiedad debera tener una descripcion de su contenido
 4. Agregar los Archivos a un ListView con las Columnas de FileName, Extension
+
+Problema-02
+1. Crear un Formulario que contenga los Siguientes Campos, Nombre,Apellido,Telefono,Direccion,Email,Id.
+2. Crear una Clase de Tipo Persona con los Campos Requeridos en el Formulario.
+3. Crear una base de datos Llamada datosPersona.data
+4. Almacenar Todos Los Registros Introducido en el Formulario en esta BD.
+5. Leer y Modificar Los Registros del Archivo.
+6. Copiar este archivo al Escritorio Comprimido.
+7. Los Datos No se pueden Borrar Automaticamente.

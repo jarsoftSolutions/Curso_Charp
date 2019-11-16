@@ -48,6 +48,14 @@
   <ItemGroup>
     <Compile Include="Clase01\AccesFiles.cs" />
     <Compile Include="Clase01\Archivo.cs" />
+    <Compile Include="Clase01\DataManager.cs" />
+    <Compile Include="Clase01\FrmClase01Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clase01\FrmClase01Data.Designer.cs">
+      <DependentUpon>FrmClase01Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clase01\Persona.cs" />
     <Compile Include="frmclase01.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +64,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Clase01\FrmClase01Data.resx">
+      <DependentUpon>FrmClase01Data.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmclase01.resx">
       <DependentUpon>frmclase01.cs</DependentUpon>
     </EmbeddedResource>
